@@ -1,0 +1,50 @@
+{
+	"head": {
+		"title": "CaiCai | Home Page",
+		"description": "一位尚有冲劲的互联网从业者",
+		"favicon": "favicon.ico"
+	},
+	"intro": {
+		"title": "Cai Cai",
+		"subtitle": "Front back left right end engineer",
+		"enter": "enter",
+		"supportAuthor": true,
+		"background": true
+	},
+	"main": {
+		"name": "Cai Cai",
+		"signature": "Code & Input & Output",
+		"avatar": {
+			"link": "assets/avatar.jpg",
+			"height": "100",
+			"width": "100"
+		},
+		"ul": {
+			"first": {
+				"href": "http://blog.cai2.wang",
+				"icon": "WriteOutline",
+				"text": "Blog"
+			},
+			"second": {
+				"href": "https://juejin.cn/user/765678299915271",
+				"icon": "juejin",
+				"text": "JueJin"
+			},
+			"third": {
+				"href": "https://github.com/Cai2w",
+				"icon": "github1",
+				"text": "Github"
+			},
+			"fourth": {
+				"href": "http://blog.cai2.wang/about/",
+				"icon": "zhifeiji",
+				"text": "About"
+			}
+		},
+		"footer": {
+			"href": "https://beian.miit.gov.cn/",
+			"label": "icp",
+			"text": "豫ICP备2021022101号"
+		}
+	}
+}
