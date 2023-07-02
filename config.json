@@ -8,7 +8,7 @@
 		"title": "Cai Cai",
 		"subtitle": "Front back left right end engineer",
 		"enter": "enter",
-		"supportAuthor": true,
+		"supportAuthor": false,
 		"background": true
 	},
 	"main": {
