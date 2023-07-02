@@ -12,4 +12,3 @@ npm run build
 ```shell
 npm run dev
 ```
-...
