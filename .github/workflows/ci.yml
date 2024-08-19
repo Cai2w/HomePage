@@ -39,7 +39,7 @@ jobs:
       # 构建项目
       - name: Build
         run: |
-          npm run bulid
+          npm run build
       # 部署项目
       - name: Deploy to GitHub Pages
         id: deployment
