@@ -43,8 +43,8 @@ jobs:
       # 部署项目
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: JamesIves/github-pages-deploy-action@releases/v3
+        uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
-            BRANCH: site # 部署后提交到那个分支
-            FOLDER: dist # 这里填打包好的目录名称
-            ACCESS_TOKEN: ${{ secrets.ACTION_DEPLOY_KEY }} # token密钥
+            branch: site # 部署后提交到那个分支
+            folder: dist # 这里填打包好的目录名称
+            token: ${{ secrets.ACTION_DEPLOY_KEY }} # token密钥
