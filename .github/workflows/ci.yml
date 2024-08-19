@@ -15,13 +15,36 @@ jobs:
   # Single deploy job since we're just deploying
   deploy:
     runs-on: ubuntu-latest
+    # 设置 node 版本
+    strategy:
+      matrix:
+        node-version: [ 20 ]
     steps:
+      # 拉取 github 仓库代码
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+      # 设定 node 环境
+      - name: Set Node ENV
+        uses: actions/setup-node@v3
+        with: 
+          node-version: ${{ matrix.node-version }}
+          # 默认配置
+          registry-url: https://registry.npmjs.org/
+      # 安装依赖，相当于 npm ci
+      - name: Install dependencies
+        run: |
+          npm install
+      # 构建项目
+      - name: Build
+        run: |
+          npm run bulid
+      # 部署项目
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: JamesIves/github-pages-deploy-action@v4.4.3
+        uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-            branch: site # 部署后提交到那个分支
-            folder: dist # 这里填打包好的目录名称
-            token: ${{ secrets.ACTION_DEPLOY_KEY }} # token密钥
+            BRANCH: site # 部署后提交到那个分支
+            FOLDER: dist # 这里填打包好的目录名称
+            ACCESS_TOKEN: ${{ secrets.ACTION_DEPLOY_KEY }} # token密钥
